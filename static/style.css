@@ -75,7 +75,7 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
-#addpage, #productdetails {
+#addpage, #editproduct {
   background-color: rgb(246,237,238);
 }
 form {
