@@ -151,6 +151,14 @@ def process_edit_product(products_id):
     })
     return redirect(url_for('list_products'))   
     
+@app.route('/delete_product/<products_id>') 
+def delete_product(products_id):
+    products = conn[DATABASE_NAME][COLLECTION_NAME].remove({
+        '_id': ObjectId(products_id)
+        
+    })
+    return redirect(url_for('list_products'))
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
