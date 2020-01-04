@@ -1,0 +1,22 @@
+body {
+  box-sizing:border-box;
+  margin: 0;
+  max-width:100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar {
+  background-color:white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand img {
+  width:80px;
+}
+.navbar-default .navbar-nav .nav-link:hover {
+    color: orange;
+    font-family: 'Montserrat', sans-serif;
+}
+.toggler img {
+  width:52px;
+  height:50px;
+}
