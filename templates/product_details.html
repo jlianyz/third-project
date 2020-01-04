@@ -19,4 +19,15 @@
                 Description: {{products.description}}
               </div>
             </div>
+            
+            
+            <div class="buttons">
+            <a href={{ url_for('show_edit_product',products_id=products._id) }}  data-toggle="tooltip" title="Edit product details"><button id="edit"><i class="fas fa-pen"></i>
+              Edit
+            </button></a>
+            <a data-toggle="modal" data-target=".bd-4-modal-md"><button id="delete"><i class="fas fa-trash-alt"></i>
+              Delete
+             </button></a>
+             </div>
+
 {% endblock %}
