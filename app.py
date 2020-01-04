@@ -94,6 +94,13 @@ def insert_product():
     
     return redirect("/")
 
+@app.route("/product_details/<product_id>")
+def products_details(product_id):
+    products = conn[DATABASE_NAME][COLLECTION_NAME].find_one({
+        "_id":ObjectId(product_id)
+    })
+    return render_template("product_details.html", products=products)
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
