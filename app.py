@@ -101,6 +101,56 @@ def products_details(product_id):
     })
     return render_template("product_details.html", products=products)
 
+@app.route('/edit_product/<products_id>') 
+def show_edit_product(products_id):
+    types = conn[DATABASE_NAME][COLLECTION_NAME2].find()
+    purposes = conn[DATABASE_NAME][COLLECTION_NAME3].find()
+    origins = conn[DATABASE_NAME][COLLECTION_NAME4].find()
+    product = conn[DATABASE_NAME][COLLECTION_NAME].find_one({
+        '_id': ObjectId(products_id)
+    })
+    return render_template('edit_product.html', product=product, types=types, purposes=purposes, origins=origins)
+    
+@app.route("/edit_product/<products_id>", methods=['POST'])
+def process_edit_product(products_id):
+    product = conn[DATABASE_NAME][COLLECTION_NAME].find_one({
+        '_id': ObjectId(products_id)
+    })
+    print(product)
+  
+    
+    name = request.form.get('name')
+    brand = request.form.get('brand')
+    price = request.form.get('price')
+    type = request.form.get('type')
+    purpose = request.form.get('purpose')
+    origin = request.form.get('origin')
+    volume = request.form.get('volume')
+    description = request.form.get('description')
+    print(request.files)
+    if "product_image" in request.files and request.files['product_image'].filename != "":
+        product_image = request.files['product_image']
+        image_filename = product_image.filename
+        mongo.save_file(product_image.filename, product_image)
+    else:
+        image_filename = product['product_image_name']
+    
+        
+    conn[DATABASE_NAME][COLLECTION_NAME].update({
+        '_id':ObjectId(products_id)
+    }, {
+        "name" : name,
+        "brand" : brand,
+        "price" : price,
+        "origin" : origin,
+        "type" : type,
+        "purpose" : purpose,
+        "volume" : volume,
+        "description" : description,
+        "product_image_name" :image_filename
+    })
+    return redirect(url_for('list_products'))   
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
