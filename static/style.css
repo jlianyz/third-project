@@ -69,6 +69,25 @@ body {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+  /* remove up and down button for number input */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+#addpage {
+  background-color: rgb(246,237,238);
+}
+form {
+  color:black;
+  margin-left:80px;
+}
+#right {
+  background-image:url('static/images/rightbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
 
 @media only screen and (max-width: 768px) { 
   .navbar-brand img{
