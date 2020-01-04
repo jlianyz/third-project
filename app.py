@@ -52,6 +52,48 @@ def list_products():
     return render_template("list_products.html", 
                            products=products,type=type, purpose=purpose, origin=origin, types=types, purposes=purposes, origins=origins)
 
+
+@app.route('/file/<filename>')
+def file(filename):
+    return mongo.send_file(filename)
+
+@app.route('/add_product') 
+def add_product():
+    types = conn[DATABASE_NAME][COLLECTION_NAME2].find()
+    purposes = conn[DATABASE_NAME][COLLECTION_NAME3].find()
+    origins = conn[DATABASE_NAME][COLLECTION_NAME4].find()
+    
+    return render_template('add_product.html', types=types, purposes=purposes, origins=origins)
+    
+@app.route('/add_product', methods=['POST'])
+def insert_product():
+    name = request.form.get('name')
+    brand = request.form.get('brand')
+    price = request.form.get('price')
+    origin = request.form.get('origin')
+    type = request.form.get('type')
+    purpose = request.form.get('purpose')
+    volume = request.form.get('volume')
+    description = request.form.get('description')
+    
+    if "product_image" in request.files:
+        product_image = request.files['product_image']
+        mongo.save_file(product_image.filename, product_image)
+    
+    conn[DATABASE_NAME][COLLECTION_NAME].insert({
+        "name" : name,
+        "brand" : brand,
+        "price" : price,
+        "origin" : origin,
+        "type" : type,
+        "purpose" : purpose,
+        "volume" : volume,
+        "description" : description,
+        "product_image_name" : product_image.filename
+    })
+    
+    return redirect("/")
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
