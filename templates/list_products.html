@@ -39,5 +39,20 @@
       </div>
     </div>
       <br><br>
+      <!--products list-->
+<div class="container">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-sm-6 col-md-4" id="box">
+      <a href="product_details/{{product['_id']}}"><h3>
+      <img src="{{url_for('file', filename=product['product_image_name'])}}" id="productimg">
+        <h3>{{product.name}}</h3>
+        <p>SGD{{product.price}}</p></a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
 {% endblock %}
 
