@@ -1,0 +1,72 @@
+{% extends 'base.html' %} 
+{% block content %}
+<br><br><br><br><br>
+<div class="container">
+  <div class="row">
+     <div class="col-sm-12 col-md-5" id="left">
+ <h1>Edit a product</h1>
+   <p>Help keep our list of products updated by correcting any outdated information you come across<br><br>
+   As we are a user-contribution based community, some members may accidentally upload wrong product information<br><br>
+   With your help, The Skincare Diaries can serve as an accurate guide to all our members!</p>
+ </div>
+    <div class="col-sm-12 col-md-7">
+<form method="POST" enctype="multipart/form-data">
+<fieldset>
+  <div class="input>
+    <label for="name">Product name: </label><br>
+    <input type="text" id="name" name="name" value = "{{product.name}}">
+  </div>
+  <div class="input>
+    <label for="price">Product price: </label><br>
+    <input type="number" id="price" name="price" value = "{{product.price}}">
+  </div>
+  <div class="input>
+    <label for="origin">Country of origin: </label><br>
+    <select name="country" required="required" class="validate">
+      {% for origin in origins %}
+        <option value={{origin.country}} {% if product.type == country %} selected{% endif %}>{{origin.country}}</option>
+       {% endfor%}
+        </select>
+  </div>
+  <div class="input>
+    <label for="volume">Quantity (ml): </label><br>
+    <input type="number" id="volume" name="volume" value = "{{product.volume}}">
+  </div>
+  <div class="input>
+    <label for="brand">Product brand name: </label><br>
+    <input type="text" id="brand" name="brand" value = "{{product.brand}}">
+  </div>
+  <div class="input>
+    <label for="type">Type:*</label><br>
+       <select name="type" required="required" class="validate">
+        {% for type in types %}
+          <option value={{type.type_cat}} {% if product.type == type %} selected{% endif %}>{{type.type_cat}}</option>
+        {% endfor%}
+      </select>
+
+  </div>
+  <div class="input>
+    <label for="purpose">Purpose: </label><br>
+      <select name="purpose" required="required" class="validate">
+        {% for purpose in purposes %}
+          <option value={{purpose.solution}} {% if product.type == purpose %} selected{% endif %}>{{purpose.solution}}</option>
+        {% endfor%}
+      </select>
+
+  </div>
+    <div class="input>
+    <label for="description">Description: </label><br>
+    <input type="textarea" id="description" name="description" value = "{{product.description}}">
+  </div>
+  <div class="input>
+    <label for="image">Product image: </label><br>
+    <input type="file" id="image" name="product_image" value = "{{product.product_image_name}}">
+  </div>
+  <br>
+  <input type="submit" value="Submit"/>
+  </fieldset>
+ </form></div>
+
+ </div>
+ </div>
+{% endblock %}
