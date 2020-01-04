@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<br><br><br><br>
+<h2>{{products.name}}</h2>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <img src="{{url_for('file', filename=products['product_image_name'])}}" id="largeproduct">
+                </div>
+                <div class="col-sm-6 col-md-8" id="details">
+                        Country of origin: {{products.origin}}<br>
+                        Price($): {{products.price}}<br>
+                        Brand: {{products.brand}}<br>
+                        Type:  {{products.type}}<br>
+                        Purpose: {{products.purpose}}<br>
+                        Volume(ml): {{products.volume}}
+                </div>
+                Description: {{products.description}}
+              </div>
+            </div>
+{% endblock %}
