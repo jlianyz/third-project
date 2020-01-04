@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% block content %}
+<br><br><br><br><br><br>
+<div class='container'>
+<!--Search-->
+<div class="container" id="search">
+  <h2>Search for your desired products</h2><br>
+  <a href="{{ url_for('list_products') }}"><button id="reset">Reset search</button></a><br><br>
+  <div class="row">
+ <!--Filter profiles by different categories below-->
+     <!--Dropdown for type -->
+ <div class="col-4 dropdown" id="tabs">
+        <button class="dropbtn">{{type}}</button>
+          <div class="dropdown-content">
+        {% for type in types %}
+            <a href="?type={{type.type_cat}}">{{type.type_cat}}</a>
+        {% endfor %}
+          </div>
+        </div>
+      <!--Dropdown for purpose -->
+   <div class="col-4 dropdown" id="tabs">
+        <button class="dropbtn">{{purpose}}</button>
+          <div class="dropdown-content">
+        {% for purpose in purposes %}
+            <a href="?purpose={{purpose.solution}}">{{purpose.solution}}</a>
+        {% endfor %}
+          </div>
+        </div>
+            <!--Dropdown for country -->
+         <div class="col-4 dropdown" id="tabs">
+        <button class="dropbtn">{{origin}}</button>
+          <div class="dropdown-content">
+        {% for origin in origins %}
+            <a href="?origin={{origin.country}}">{{origin.country}}</a>
+        {% endfor %}
+          </div>
+        </div>
+   
+      </div>
+    </div>
+      <br><br>
+{% endblock %}
+
