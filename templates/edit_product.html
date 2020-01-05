@@ -21,6 +21,7 @@
     <label for="price">Product price: </label><br>
     <input type="number" id="price" name="price" value = "{{product.price}}">
   </div><br>
+   <!--for loop to loop through values for country attribute so that we dont have to manually type the options. 'Selected' ensures that the existing option is selected-->
   <div class="input>
     <label for="origin">Country of origin: </label><br>
     <select name="country" required="required" class="validate">
@@ -37,6 +38,7 @@
     <label for="brand">Product brand name: </label><br>
     <input type="text" id="brand" name="brand" value = "{{product.brand}}">
   </div><br>
+  <!--for loop to loop through values for type attribute so that we dont have to manually type the options. 'Selected' ensures that the existing option is selected-->
   <div class="input>
     <label for="type">Type:*</label><br>
        <select name="type" required="required" class="validate">
@@ -45,6 +47,7 @@
         {% endfor%}
       </select>
   </div><br>
+   <!--for loop to loop through values for purpose attribute so that we dont have to manually type the options. 'Selected' ensures that the existing option is selected-->
   <div class="input>
     <label for="purpose">Purpose: </label><br>
       <select name="purpose" required="required" class="validate">
