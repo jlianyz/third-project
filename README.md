@@ -1,7 +1,7 @@
 # The Skincare Diaries
 ## Data Centric Development Milestone Project
 ### Introduction
-The purpose of this site is for skincare aficionados to research more about top skincare products and also contribute their latest finds to the community. They are also able to update outdated information on products or delete products that are no longer relevant.
+The purpose of this site is for skincare aficionados to research more about top skincare products and also contribute their latest finds to the community. They are also able to update outdated information on products or delete products that are no longer relevant. The site can be found [here](https://jlyz-project3mongo.herokuapp.com/)
 
 ### User stories
 ##### As a newbie to skincare, I want to:
@@ -142,9 +142,9 @@ Heroku deployment - this is done as a last step to ensure that all installed pac
 9.	Create a file named "Procfile", add: `web gunicorn app:app` and save it
 10.	Create the requirements.txt file using bash: `pip3 freeze --local > requirements.txt`
 11.	Commit and push the project to heroku
-o	`git add .`
-o	`git commit -m "commit name"`
-o	`git push heroku master`
+* `git add .`
+* `git commit -m "commit name"`
+* `git push heroku master`
 12. Enter your key and value in Heroku config in bash: `heroku config:set MONGO_URI=(input here)`
 
 
