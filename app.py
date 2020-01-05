@@ -116,8 +116,6 @@ def process_edit_product(products_id):
     product = conn[DATABASE_NAME][COLLECTION_NAME].find_one({
         '_id': ObjectId(products_id)
     })
-    print(product)
-  
     
     name = request.form.get('name')
     brand = request.form.get('brand')

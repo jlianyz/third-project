@@ -25,7 +25,7 @@
     <label for="origin">Country of origin: </label><br>
     <select name="country" required="required" class="validate">
       {% for origin in origins %}
-        <option value={{origin.country}} {% if product.type == country %} selected{% endif %}>{{origin.country}}</option>
+        <option value={{origin.country}} {% if product.origin == country %} selected{% endif %}>{{origin.country}}</option>
        {% endfor%}
         </select>
   </div><br>
