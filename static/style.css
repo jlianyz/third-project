@@ -111,6 +111,7 @@ form {
 .background {
   background-image:url('../static/images/add.jpg');
   background-size: cover;
+  width:100%;
 }
 #right {
   background-image:url('static/images/rightbg.png');
@@ -133,8 +134,18 @@ form {
     #largeproduct {
     height:400px;
   }
+  .desc {
+    padding:5px 10px;
+    text-align:justify;
+  }
 @media only screen and (max-width: 768px) { 
   .navbar-brand img{
     display:none;
   }
+ .dropdown-content {
+   font-size:10px;
+}
+ .dropdown-content a {
+   padding:5px;
+}
 }
