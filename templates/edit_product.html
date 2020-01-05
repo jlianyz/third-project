@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
+<div class="background">
 <br><br><br><br><br>
 <div class="container" id="editproduct">
   <div class="row">
@@ -15,11 +16,11 @@
   <div class="input>
     <label for="name">Product name: </label><br>
     <input type="text" id="name" name="name" value = "{{product.name}}">
-  </div>
+  </div><br>
   <div class="input>
     <label for="price">Product price: </label><br>
     <input type="number" id="price" name="price" value = "{{product.price}}">
-  </div>
+  </div><br>
   <div class="input>
     <label for="origin">Country of origin: </label><br>
     <select name="country" required="required" class="validate">
@@ -27,15 +28,15 @@
         <option value={{origin.country}} {% if product.type == country %} selected{% endif %}>{{origin.country}}</option>
        {% endfor%}
         </select>
-  </div>
+  </div><br>
   <div class="input>
     <label for="volume">Quantity (ml): </label><br>
     <input type="number" id="volume" name="volume" value = "{{product.volume}}">
-  </div>
+  </div><br>
   <div class="input>
     <label for="brand">Product brand name: </label><br>
     <input type="text" id="brand" name="brand" value = "{{product.brand}}">
-  </div>
+  </div><br>
   <div class="input>
     <label for="type">Type:*</label><br>
        <select name="type" required="required" class="validate">
@@ -43,8 +44,7 @@
           <option value={{type.type_cat}} {% if product.type == type %} selected{% endif %}>{{type.type_cat}}</option>
         {% endfor%}
       </select>
-
-  </div>
+  </div><br>
   <div class="input>
     <label for="purpose">Purpose: </label><br>
       <select name="purpose" required="required" class="validate">
@@ -52,12 +52,11 @@
           <option value={{purpose.solution}} {% if product.type == purpose %} selected{% endif %}>{{purpose.solution}}</option>
         {% endfor%}
       </select>
-
-  </div>
+  </div><br>
     <div class="input>
     <label for="description">Description: </label><br>
     <input type="textarea" id="description" name="description" value = "{{product.description}}">
-  </div>
+  </div><br>
   <div class="input>
     <label for="image">Product image: </label><br>
     <input type="file" id="image" name="product_image" value = "{{product.product_image_name}}">
@@ -67,6 +66,7 @@
   </fieldset>
  </form></div>
 
+ </div>
  </div>
  </div>
 {% endblock %}

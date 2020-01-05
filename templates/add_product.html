@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
+<div class="background">
   <br><br><br><br><br>
 <div class="container" id="addpage">
   <div class="row">
@@ -16,11 +17,11 @@
   <div class="input>
     <label for="name">Product name:*</label><br>
     <input type="text" id="name" name="name" required>
-  </div>
+  </div><br>
   <div class="input>
     <label for="price">Product price:*</label><br>
     <input type="number" id="price" name="price" required>
-  </div>
+  </div><br>
   <div class="input>
     <label for="origin">Country of origin:*</label><br>
     <select name="country" required="required" class="validate">
@@ -29,15 +30,15 @@
         <option value={{origin.country}}>{{origin.country}}</option>
        {% endfor%}
         </select>
-  </div>
+  </div><br>
   <div class="input>
     <label for="volume">Quantity (ml):*</label><br>
     <input type="number" id="volume" name="volume" required>
-  </div>
+  </div><br>
   <div class="input>
     <label for="brand">Product brand name:*</label><br>
     <input type="text" id="brand" name="brand" required>
-  </div>
+  </div><br>
   <div class="input>
     <label for="type">Type:*</label><br>
     <select name="type" required="required" class="validate">
@@ -46,7 +47,7 @@
         <option value={{type.type_cat}}>{{type.type_cat}}</option>
        {% endfor%}
        </select>
-  </div>
+  </div><br>
   <div class="input>
     <label for="purpose">Purpose:*</label><br>
     <select name="purpose" required="required" class="validate">
@@ -54,22 +55,23 @@
       {% for purpose in purposes %}
         <option value={{purpose.solution}}>{{purpose.solution}}</option>
        {% endfor%}
-       </select
-  </div>
+       </select>
+  </div><br>
   <div class="input>
     <label for="description">Description</label><br>
     <input type="textarea" id="description" name="description">
-  </div>
+  </div><br>
       <form action="/upload-image" method="POST" enctype="multipart/form-data">
           <div class="input">
             <label for="image">Select image</label><br>
             <input type="file" name="product_image">
           </div>
-        </div><br>
+        <br>
           <input type="submit" value="Submit"/>
       </form>
   </fieldset>
  </form>
+ </div>
  </div>
  </div>
  </div>

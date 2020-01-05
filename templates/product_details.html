@@ -3,12 +3,13 @@
 
 <br><br><br><br>
 <h2>{{products.name}}</h2>
+<br>
             <div class="container" id="productdetails">
               <div class="row">
-                <div class="col-sm-6 col-md-4">
+                <div class="col-sm-12 col-md-6">
                   <img src="{{url_for('file', filename=products['product_image_name'])}}" id="largeproduct">
                 </div>
-                <div class="col-sm-6 col-md-8" id="details">
+                <div class="col-sm-12 col-md-6" id="details">
                         Country of origin: {{products.origin}}<br>
                         Price($): {{products.price}}<br>
                         Brand: {{products.brand}}<br>
@@ -19,7 +20,7 @@
                 Description: {{products.description}}
               </div>
             </div>
-            
+            <br>
             
             <div class="buttons">
             <a href={{ url_for('show_edit_product',products_id=products._id) }}  data-toggle="tooltip" title="Edit product details"><button id="edit"><i class="fas fa-pen"></i>
@@ -28,6 +29,9 @@
             <a data-toggle="modal" data-target=".bd-4-modal-md"><button id="delete"><i class="fas fa-trash-alt"></i>
               Delete
              </button></a>
+             <a href={{ url_for('list_products') }}><button id="back"><i class="fas fa-arrow-alt-circle-left"></i>
+              Back
+            </button></a>
              </div>
              <div class="modal fade bd-4-modal-md" tabindex="-1" role="dialog">
               <div class="modal-dialog modal-dialog-centered">
