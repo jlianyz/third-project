@@ -88,7 +88,7 @@ This site is tested to be responsive on the following devices:
 * Edge
 * IE
 
-Manual testing
+### Manual testing
 #### Base page
 * Navigation bar is mobile responsive and links to the correct pages.
 * Logo is of appropriate size and toggle works for mobile
@@ -123,7 +123,7 @@ Manual testing
 * The information is updated in MongoDB to reflected the edited details in the correct format (string, integer etc)
 * Upon submission, the user is correctly redirected back to the index page.
 
-Interesting errors encountered and steps taken to fix them
+### Interesting errors encountered and steps taken to fix them
 1.	When editing product info, existing image not stored and not showing up if a new image is not added
 * Solution: added if else statement in app.py to ensure that existing image will still show up
 
@@ -142,10 +142,10 @@ Heroku deployment - this is done as a last step to ensure that all installed pac
 9.	Create a file named "Procfile", add: `web gunicorn app:app` and save it
 10.	Create the requirements.txt file using bash: `pip3 freeze --local > requirements.txt`
 11.	Commit and push the project to heroku
-o	`git add .``
+o	`git add .`
 o	`git commit -m "commit name"`
 o	`git push heroku master`
-12. Enter your key and value in Heroku config in bash: `heroku config:set MONGO_URI=(input here)``
+12. Enter your key and value in Heroku config in bash: `heroku config:set MONGO_URI=(input here)`
 
 
 I deployed the site to Github with the following steps:
