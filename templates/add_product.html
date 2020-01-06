@@ -25,7 +25,7 @@
   <!--for loop to loop through values for country attribute so that we dont have to manually type the options -->
   <div class="input>
     <label for="origin">Country of origin:*</label><br>
-    <select name="country" required="required" class="validate">
+    <select name="origin" required="required" class="validate">
       <option value = country>Country</option>
       {% for origin in origins %}
         <option value={{origin.country}}>{{origin.country}}</option>

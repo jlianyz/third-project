@@ -24,7 +24,7 @@
    <!--for loop to loop through values for country attribute so that we dont have to manually type the options. 'Selected' ensures that the existing option is selected-->
   <div class="input>
     <label for="origin">Country of origin: </label><br>
-    <select name="country" required="required" class="validate">
+    <select name="origin" required="required" class="validate">
       {% for origin in origins %}
         <option value={{origin.country}} {% if product.origin == country %} selected{% endif %}>{{origin.country}}</option>
        {% endfor%}
