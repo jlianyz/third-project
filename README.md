@@ -38,6 +38,7 @@ The site is mobile responsive on all forms of media (laptop, mobile and tablet).
 * Input fields with standard attributes (country of origin, type and purpose) and a dropdown menu. The menu is created using a for loop to loop through the existing values 
 * For pictures, users can upload any image file from their local drive
 * Submit button for the user to add products
+* Reminder to user to upload the corrrect image file types
 * User is able to upload an image to the corresponding recipe
 * Once the product is submitted, user will be redirected to product list where they can see the product that they have just added.
 #### Products list page
@@ -56,6 +57,7 @@ The site is mobile responsive on all forms of media (laptop, mobile and tablet).
 * Contains bootstrap divs, with a left div explaining more about why keeping the information updated is important and a right div containing the form for them to update the product
 * Similar to the add product form, it contains product information in either text, number or dropdown.
 * If user does not make changes, the previous information will still be displayed.
+* Reminder to user to upload the correct image file types
 
 
 ### Technologies used
@@ -99,7 +101,6 @@ This site is tested to be responsive on the following devices:
 * Making sure that user is unable to submit a product if required fields are not filled in
 * Dropdown list for loop is working and showing the right values for the right attributes
 * User is unable to enter text into the number fields
-* Testing with jpg, png and non-image files to ensure that only image files of less than xMB are allowed to be uploaded
 * Submit button for the user to add new product is working
 * Ensuring that user is redirected back to the main page after pressing the submit button
 #### Products list page
@@ -116,7 +117,7 @@ This site is tested to be responsive on the following devices:
 * When clicking on the delete button, the yes and no buttons in the modal work and redirect the user accordingly to the right page
 * When clicking on the back button, the user is correctly redirected back to the products list page
 #### Edit product page
-* 	Input fields correctly display the existing information
+* Input fields correctly display the existing information
 * If user does not make any changes and presses the submit button, the same information is showing
 * If user does not fill in or removes any of the required fields, they are unable to press the submit button
 * The updated information is showing correctly in the products listing page
@@ -152,6 +153,7 @@ I deployed the site to Github with the following steps:
 1. Go to this repository's github [link](https://github.com/jlianyz/third-project)
 2. Click on settings --> Github Pages
 3. Select "none" for the Source and then select "master branch"
+4. Stored my MONGI URI as a key using bash
 
 For my IDE, I used AWS Cloud9. My file architecture is as follows:
 * A separate folder for templates containing html files
@@ -161,10 +163,11 @@ For my IDE, I used AWS Cloud9. My file architecture is as follows:
 * requirements.txt file
 
 To deploy the page locally:
-1.	Go to the github [link](https://github.com/jlianyz/second-project)
+1.	Go to the github [link](https://github.com/jlianyz/third-project)
 2.	Click on the Clone/download button and copy the URL 
-3.	Change the working directory in your local IDE’s Git Bash to the location where you want to store the cloned directory
-4.	Type "git clone https://github.com/username/repository" in the CDL 
+3.	Set up a database with similar collections in MongoDB
+4.	Set up your own MONGI URI key
+4.	6.	To run the application locally, type `python3 app.py` in bash
 ***
 ### Credits
 **Images**
