@@ -3,57 +3,55 @@
 <br><br><br><br><br><br>
 <div class='container'>
 <!--Search-->
-<div class="container" id="search">
-  <h2>Search for your desired products</h2><br>
-  <p>Click on each product image to read more about it.</p>
-  <a href="{{ url_for('list_products') }}"><button id="reset">Reset search</button></a><br><br>
+  <div class="container" id="search">
+    <h2>Search for your desired products</h2><br>
+    <p>Click on each product image to read more about it.</p>
+    <a href="{{ url_for('list_products') }}"><button id="reset">Reset search</button></a><br><br>
   <div class="row">
- <!--Filter profiles by different categories below-->
-     <!--Dropdown for type -->
- <div class="col-4 dropdown" id="tabs">
-        <button class="dropbtn">{{type}}</button>
-          <div class="dropdown-content">
+   <!--Filter profiles by different categories below-->
+    <!--Dropdown for type -->
+    <div class="col-4 dropdown" id="tabs">
+      <button class="dropbtn">{{type}}</button>
+      <div class="dropdown-content">
         {% for type in types %}
-            <a href="?type={{type.type_cat}}">{{type.type_cat}}</a>
+          <a href="?type={{type.type_cat}}">{{type.type_cat}}</a>
         {% endfor %}
-          </div>
-        </div>
-      <!--Dropdown for purpose -->
-   <div class="col-4 dropdown" id="tabs">
-        <button class="dropbtn">{{purpose}}</button>
-          <div class="dropdown-content">
-        {% for purpose in purposes %}
-            <a href="?purpose={{purpose.solution}}">{{purpose.solution}}</a>
-        {% endfor %}
-          </div>
-        </div>
-            <!--Dropdown for country -->
-         <div class="col-4 dropdown" id="tabs">
-        <button class="dropbtn">{{origin}}</button>
-          <div class="dropdown-content">
-        {% for origin in origins %}
-            <a href="?origin={{origin.country}}">{{origin.country}}</a>
-        {% endfor %}
-          </div>
-        </div>
-   
       </div>
     </div>
-      <br><br>
-      <!--products list-->
-<div class="container" id="listproduct"></a>
-  <div class="row">
-    {% for product in products %}
-    <div class="col-sm-6 col-md-4" id="box">
-      <a href="product_details/{{product['_id']}}"><h3>
-      <img src="{{url_for('file', filename=product['product_image_name'])}}" id="productimg">
+    <!--Dropdown for purpose -->
+    <div class="col-4 dropdown" id="tabs">
+      <button class="dropbtn">{{purpose}}</button>
+      <div class="dropdown-content">
+        {% for purpose in purposes %}
+          <a href="?purpose={{purpose.solution}}">{{purpose.solution}}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <!--Dropdown for country -->
+    <div class="col-4 dropdown" id="tabs">
+      <button class="dropbtn">{{origin}}</button>
+      <div class="dropdown-content">
+        {% for origin in origins %}
+          <a href="?origin={{origin.country}}">{{origin.country}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  </div>
+<br><br>
+<!--products list-->
+  <div class="container" id="listproduct"></a>
+    <div class="row">
+      {% for product in products %}
+      <div class="col-sm-6 col-md-4" id="box">
+        <a href="product_details/{{product['_id']}}"><h3>
+        <img src="{{url_for('file', filename=product['product_image_name'])}}" id="productimg">
         <h3>{{product.name}}</h3>
         <p>SGD{{product.price}}</p></a>
       </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </div>
-
-
 {% endblock %}
 

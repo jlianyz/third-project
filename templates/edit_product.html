@@ -2,16 +2,16 @@
 {% block content %}
 <div class="background">
 <br><br><br><br><br>
-<div class="container" id="editproduct">
-  <div class="row">
-    <div class="col-sm-12 col-md-5" id="left">
-      <h1>Edit a product</h1>
-      <p>Help keep our list of products updated by correcting any outdated information you come across<br><br>
-         As we are a user-contribution based community, some members may accidentally upload wrong product information<br><br>
-         With your help, The Skincare Diaries can serve as an accurate guide to all our members!</p>
-    </div>
-    <div class="col-sm-12 col-md-7">
-      <form method="POST" enctype="multipart/form-data">
+  <div class="container" id="editproduct">
+    <div class="row">
+      <div class="col-sm-12 col-md-5" id="left">
+        <h1>Edit a product</h1>
+        <p>Help keep our list of products updated by correcting any outdated information you come across<br><br>
+           As we are a user-contribution based community, some members may accidentally upload wrong product information<br><br>
+           With your help, The Skincare Diaries can serve as an accurate guide to all our members!</p>
+      </div>
+      <div class="col-sm-12 col-md-7">
+        <form method="POST" enctype="multipart/form-data">
         <fieldset>
           <div class="input>
             <label for="name">Product name: </label><br>
@@ -62,15 +62,15 @@
                </textarea>
             </div><br>
             <div class="input>
-              <label for="image">Product image: </label><br>
+              <label for="image">Product image (only jpg or png files): </label><br>
                 <input type="file" id="image" name="product_image" value = "{{product.product_image_name}}">
             </div>
             <br>
                 <input type="submit" value="Submit"/>
         </fieldset>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
- </div>
 </div>
 {% endblock %}
