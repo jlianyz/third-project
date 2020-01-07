@@ -15,6 +15,7 @@ body {
 .navbar-default .navbar-nav .nav-link:hover {
     color: orange;
     font-family: 'Montserrat', sans-serif;
+    font-weight:bolder;
 }
 .toggler img {
   width:52px;
@@ -113,12 +114,6 @@ form {
   background-size: cover;
   width:100%;
 }
-#right {
-  background-image:url('static/images/rightbg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width:100%;
-}
   #edit {
     background-color:rgba(0,255,0,0.5);
     padding:10px;
@@ -147,5 +142,9 @@ form {
 }
  .dropdown-content a {
    padding:5px;
+}
+#largeproduct {
+  margin:0 auto;
+  display:block;
 }
 }
