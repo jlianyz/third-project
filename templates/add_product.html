@@ -11,7 +11,7 @@
              By sharing new products with the community, everyone benefits from the research you have done!</p>
         </div>
         <div class="col-sm-12 col-md-6">
-          <form method="POST" enctype="multipart/form-data" id="addpdt"><!--multipart form data allows images to be uploaded-->
+          <form method="POST" action="{{url_for('insert_product')}}" enctype="multipart/form-data" id="addpdt"><!--multipart form data allows images to be uploaded-->
           <fieldset>
             <div class="input>
               <label for="name">Product name:*</label><br>

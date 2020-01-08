@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, flash
 import pymongo
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -15,6 +15,7 @@ COLLECTION_NAME2 = "types" # contains all the products types
 COLLECTION_NAME3 = "purpose" # contains all the products' purposes
 COLLECTION_NAME4 = "origin" # contains all the products countries
 mongo = PyMongo(app)
+app.secret_key = "secret"
 
 # link to index page
 @app.route('/')
@@ -94,7 +95,7 @@ def insert_product():
         "description" : description,
         "product_image_name" : product_image.filename
     })
-    
+    flash("Your product has been added.", 'success')
     return redirect("/")
 
 #link to the correct object id from the "products" collection
@@ -152,6 +153,7 @@ def process_edit_product(products_id):
         "description" : description,
         "product_image_name" :image_filename
     })
+    flash("Your product has been updated.", 'success')
     return redirect(url_for('list_products'))   
 
 # to delete the product identified using the product id    
@@ -161,6 +163,7 @@ def delete_product(products_id):
         '_id': ObjectId(products_id)
         
     })
+    flash("Your product has been deleted.")
     return redirect(url_for('list_products'))
     
 if __name__ == '__main__':
