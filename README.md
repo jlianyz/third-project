@@ -41,6 +41,7 @@ The site is mobile responsive on all forms of media (laptop, mobile and tablet).
 * Reminder to user to upload the corrrect image file types
 * User is able to upload an image to the corresponding recipe
 * Once the product is submitted, user will be redirected to product list where they can see the product that they have just added.
+* A message will also be flashed to confirm that they have added the product 
 #### Products list page
 * Users can search for their products based on country of origin, type or purpose using the dropdown lists
 * Mobile responsive cards are used to display the product’s name, image and price. The selection will be updated when users filter with the above dropdown
@@ -52,12 +53,14 @@ The site is mobile responsive on all forms of media (laptop, mobile and tablet).
 * This page also allows users to edit the product info, delete it or go back to the main products listing page with color coded buttons
 * When users choose to edit the product, they will be redirected to the edit products page
 * When users choose to delete the product, a modal will pop up to confirm they really want to delete the product or not. If they click “yes”, they will be redirected to the main page. If they click “no” or outside of the modal, the modal will close and user remains on the product details page
+* A message will also be flashed to confirm that they have deleted the product
 * When users choose to go back, they will be redirected to the products listing page
 #### Edit product page
 * Contains bootstrap divs, with a left div explaining more about why keeping the information updated is important and a right div containing the form for them to update the product
 * Similar to the add product form, it contains product information in either text, number or dropdown.
 * If user does not make changes, the previous information will still be displayed.
 * Reminder to user to upload the correct image file types
+* A message will also be flashed to confirm that they have updated the product
 
 
 ### Technologies used
@@ -130,6 +133,9 @@ This site is tested to be responsive on the following devices:
 
 2.	Initially, I wanted product details to show up in a modal box but each time I clicked on an image for more info, the details of the first product in the list would show up in every box, regardless of which image I was clicking
 * Solution: Create a separate product details page. Reason for the error was that the modal box was unable to link to the correct product id.
+
+### Known errors
+For IE and Edge, the pink overlay does not show up on the add and edit pages. However, the form and text is still visible.
 ***
 
 ### Deployment

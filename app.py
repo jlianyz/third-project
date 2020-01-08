@@ -47,7 +47,6 @@ def list_products():
         
 # search through the following collections and display the products accordingly        
     products = conn[DATABASE_NAME][COLLECTION_NAME].find(criteria)
-    print(products)
     types = conn[DATABASE_NAME][COLLECTION_NAME2].find()
     purposes = conn[DATABASE_NAME][COLLECTION_NAME3].find()
     origins = conn[DATABASE_NAME][COLLECTION_NAME4].find()
@@ -131,7 +130,6 @@ def process_edit_product(products_id):
     origin = request.form.get('origin')
     volume = request.form.get('volume')
     description = request.form.get('description')
-    print(request.files)
     if "product_image" in request.files and request.files['product_image'].filename != "": # ensure that if no image is added, existing one still shows
         product_image = request.files['product_image']
         image_filename = product_image.filename
