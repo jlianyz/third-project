@@ -11,7 +11,7 @@
              By sharing new products with the community, everyone benefits from the research you have done!</p>
         </div>
         <div class="col-sm-12 col-md-6">
-          <form method="POST" enctype="multipart/form-data" id="addpdt">
+          <form method="POST" enctype="multipart/form-data" id="addpdt"><!--multipart form data allows images to be uploaded-->
           <fieldset>
             <div class="input>
               <label for="name">Product name:*</label><br>
@@ -64,13 +64,11 @@
               <textarea rows="6" cols="30" id="description" name="description">
               </textarea>
             </div><br>
-            <form action="/upload-image" method="POST" enctype="multipart/form-data"> <!--multipart form data allows images to be uploaded-->
-              <div class="input">
+            <div class="input">
               <label for="image">Select image: (jpg or png files only)</label><br>
               <input type="file" name="product_image">
             </div><br>
             <input type="submit" value="Submit"/>
-            </form>
           </fieldset>
           </form>
         </div>
