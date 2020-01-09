@@ -25,9 +25,9 @@
             <div class="input>
               <label for="origin">Country of origin:*</label><br>
               <select name="origin" required="required" class="validate">
-                <option value = country>Country</option>
+                <option value = "country" disabled selected>Country</option>
                 {% for origin in origins %}
-                <option value={{origin.country}}>{{origin.country}}</option>
+                <option value="{{origin.country}}">{{origin.country}}</option>
                 {% endfor%}
               </select>
             </div><br>
@@ -43,9 +43,9 @@
             <div class="input>
               <label for="type">Type:*</label><br>
               <select name="type" required="required" class="validate">
-                <option value = type>Type</option>
+                <option value = "type" disabled selected>Type</option>
                 {% for type in types %}
-                <option value={{type.type_cat}}>{{type.type_cat}}</option>
+                <option value="{{type.type_cat}}">{{type.type_cat}}</option>
                 {% endfor%}
               </select>
             </div><br>
@@ -53,9 +53,9 @@
             <div class="input>
               <label for="purpose">Purpose:*</label><br>
               <select name="purpose" required="required" class="validate">
-                <option value = purpose>Purpose</option>
+                <option value ="purpose" disabled selected>Purpose</option>
                 {% for purpose in purposes %}
-                <option value={{purpose.solution}}>{{purpose.solution}}</option>
+                <option value="{{purpose.solution}}">{{purpose.solution}}</option>
                 {% endfor%}
               </select>
             </div><br>

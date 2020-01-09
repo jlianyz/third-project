@@ -2,16 +2,16 @@
 {% block content %}
 <div class="background">
 <br><br><br><br><br>
-  <div class="container" id="editproduct">
-    <div class="row">
-      <div class="col-sm-12 col-md-5" id="left">
-        <h1>Edit a product</h1>
-        <p>Help keep our list of products updated by correcting any outdated information you come across<br><br>
-           As we are a user-contribution based community, some members may accidentally upload wrong product information<br><br>
-           With your help, The Skincare Diaries can serve as an accurate guide to all our members!</p>
-      </div>
-      <div class="col-sm-12 col-md-7">
-        <form method="POST" enctype="multipart/form-data">
+<div class="container" id="editproduct">
+  <div class="row">
+    <div class="col-sm-12 col-md-5" id="left">
+      <h1>Edit a product</h1>
+      <p>Help keep our list of products updated by correcting any outdated information you come across<br><br>
+         As we are a user-contribution based community, some members may accidentally upload wrong product information<br><br>
+         With your help, The Skincare Diaries can serve as an accurate guide to all our members!</p>
+    </div>
+    <div class="col-sm-12 col-md-7">
+      <form method="POST" enctype="multipart/form-data">
         <fieldset>
           <div class="input>
             <label for="name">Product name: </label><br>
@@ -19,20 +19,20 @@
           </div><br>
           <div class="input>
             <label for="price">Product price: </label><br>
-            <input type="number" id="price" name="price" value = "{{product.price}}">
+            <input type="number" id="price" name="price" value = {{product.price}}>
           </div><br>
   <!--for loop to loop through values for country attribute so that we dont have to manually type the options. 'Selected' ensures that the existing option is selected-->
           <div class="input>
             <label for="origin">Country of origin: </label><br>
               <select name="origin" required="required" class="validate">
                 {% for origin in origins %}
-                <option value={{origin.country}} {% if product.origin == country %} selected{% endif %}>{{origin.country}}</option>
-                {% endfor%}
+                <option value="{{origin.country}}" {% if product.origin == origin.country %} selected{% endif %}>{{origin.country}}</option>
+                {% endfor %}
               </select>
           </div><br>
           <div class="input>
             <label for="volume">Quantity (ml): </label><br>
-            <input type="number" id="volume" name="volume" value = "{{product.volume}}">
+            <input type="number" id="volume" name="volume" value = {{product.volume}}>
           </div><br>
           <div class="input>
             <label for="brand">Product brand name: </label><br>
@@ -43,7 +43,7 @@
             <label for="type">Type:*</label><br>
             <select name="type" required="required" class="validate">
               {% for type in types %}
-               <option value={{type.type_cat}} {% if product.type == type %} selected{% endif %}>{{type.type_cat}}</option>
+               <option value="{{type.type_cat}}" {% if product.type == type.type_cat %}  selected{% endif %}>{{type.type_cat}}</option>
                {% endfor%}
             </select>
           </div><br>
@@ -52,14 +52,13 @@
             <label for="purpose">Purpose: </label><br>
               <select name="purpose" required="required" class="validate">
                 {% for purpose in purposes %}
-                <option value={{purpose.solution}} {% if product.type == purpose %} selected{% endif %}>{{purpose.solution}}</option>
-                {% endfor%}
+                <option value="{{purpose.solution}}" {% if product.purpose == purpose.solution %}selected {% endif %}>{{purpose.solution}}</option>
+                {% endfor %}
               </select>
             </div><br>
             <div class="input>
               <label for="description">Description: </label><br>
-               <textarea rows="6" cols="30" id="description" name="description">{{product.description}}"
-               </textarea>
+               <textarea rows="6" cols="30" id="description" name="description">{{product.description}}</textarea>
             </div><br>
             <div class="input>
               <label for="image">Product image (only jpg or png files): </label><br>
@@ -68,9 +67,9 @@
             <br>
                 <input type="submit" value="Submit"/>
         </fieldset>
-        </form>
-      </div>
+      </form>
     </div>
   </div>
+ </div>
 </div>
 {% endblock %}
