@@ -47,7 +47,7 @@
         <a href="product_details/{{product['_id']}}"><h3>
         <img src="{{url_for('file', filename=product['product_image_name'])}}" id="productimg" onerror="this.src='/static/images/defaultimage.png'">
         <h3>{{product.name}}</h3>
-        <p>SGD{{product.price}}</p></a>
+        <p>SGD {{product.price}}</p></a>
       </div>
       {% endfor %}
     </div>

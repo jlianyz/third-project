@@ -13,14 +13,58 @@
         </div>
         <!--lines are more spaced out with css to make the page look more balanced relative to the image size-->
         <div class="col-sm-12 col-md-6" id="details">
-            Country of origin: {{products.origin}}
-            <br> Price($): {{products.price}}
-            <br> Brand: {{products.brand}}
-            <br> Type: {{products.type}}
-            <br> Purpose: {{products.purpose}}
-            <br> Volume(ml): {{products.volume}}
+            <div class="container">
+              <div class="row">
+                  <div class="col-6" id="header">
+                      Country of origin:
+                  </div>
+                  <div class="col-6">
+                      {{products.origin}}
+                  </div>
+              </div>    
+              <div class="row">
+                  <div class="col-6" id="header">
+                      Price($):
+                  </div>
+                  <div class="col-6">
+                      {{products.price}}
+                  </div>
+              </div>    
+              <div class="row">
+                  <div class="col-6" id="header">
+                      Brand:
+                  </div>
+                  <div class="col-6">
+                      {{products.brand}}
+                  </div>
+              </div>    
+              <div class="row">
+                  <div class="col-6" id="header">
+                      Type:
+                  </div>
+                  <div class="col-6">
+                      {{products.type}}
+                  </div>
+              </div>    
+              <div class="row">
+                  <div class="col-6"  id="header">
+                      Purpose:
+                  </div>
+                  <div class="col-6">
+                      {{products.purpose}}
+                  </div>
+              </div>    
+              <div class="row">
+                  <div class="col-6" id="header">
+                      Volume(ml):
+                  </div>
+                  <div class="col-6">
+                      {{products.volume}}
+                  </div>
+              </div>    
+            </div>
         </div>
-        <div class="desc">Description: {{products.description}}</div>
+       <div class="description">{{products.description}}</div>
     </div>
 </div>
 <br>
