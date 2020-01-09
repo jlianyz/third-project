@@ -96,6 +96,7 @@ This site is tested to be responsive on the following devices:
 * IE
 
 ### Manual testing
+The following checks were done:
 #### Base page
 * Navigation bar is mobile responsive and links to the correct pages.
 * Logo is of appropriate size and toggle works for mobile
@@ -108,16 +109,19 @@ This site is tested to be responsive on the following devices:
 * User is unable to enter text into the number fields
 * Submit button for the user to add new product is working
 * Ensuring that user is redirected back to the main page after pressing the submit button
+* The flashed message is showing up correctly
 #### Products list page
 * Ensuring that the dropdown searches work for each of the 3 attributes and that the right products are showing up for the searches
 * When the product is clicked, users are redirected to the right product details page
 * Products are listed in the right mobile responsive view and no images overlap
 * Reset button works and clears the search
+* The fallback image is showing up correctly in the event that no image was uploaded
 #### Product details page
 * The right product attributes are showing up
 * The image is displaying in the right size and does not overlap with the text regardless of device
 * The text is easy to read
 * The edit, delete and back buttons are working
+* The fallback image is showing up correctly
 * When clicking on the edit button, users are redirected to the correct product’s edit page
 * When clicking on the delete button, the yes and no buttons in the modal work and redirect the user accordingly to the right page
 * When clicking on the back button, the user is correctly redirected back to the products list page
@@ -128,6 +132,7 @@ This site is tested to be responsive on the following devices:
 * The updated information is showing correctly in the products listing page
 * The information is updated in MongoDB to reflected the edited details in the correct format (string, integer etc)
 * Upon submission, the user is correctly redirected back to the index page.
+* The flash message is showing up correctly
 
 ### Interesting errors encountered and steps taken to fix them
 1.	When editing product info, existing image not stored and not showing up if a new image is not added
