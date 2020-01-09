@@ -11,16 +11,16 @@ body {
 
 /*overwrite bootstrap css*/
 .navbar .navbar-nav .nav-link {
-    color: white;
-    font-weight:bolder;
+  color: white;
+  font-weight:bolder;
 }
 .navbar-brand img {
   width:80px;
 }
 .navbar-default .navbar-nav .nav-link:hover {
-    color: orange;
-    font-family: 'Montserrat', sans-serif;
-    font-weight:bolder;
+  color: orange;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:bolder;
 }
 .toggler img {
   width:52px;
@@ -34,32 +34,31 @@ h2 {
   color:green;
   font-weight:bolder;
 }
-  #box {
-   text-align:center;
-  }
-  #productimg {
-    height:200px;
-  }
-  #details {
-    line-height:3em;
-  }
-  #search {
-    text-align:center;
-    font-family: 'Montserrat', sans-serif;
-  }
- #reset {
-   background-color:orange;
-   font-weight:bolder;
-   height:40px;
- }
- .description {
-   margin: 0 10px;
-   font-weight:bold;
- }
- #header {
-   font-weight:bolder;
- }
-  .jumbotron {
+#box {
+  text-align:center;
+}
+#productimg {
+  height:200px;
+}
+#details {
+  line-height:3em;
+}
+#search {
+  text-align:center;
+}
+#reset {
+ background-color:orange;
+ font-weight:bolder;
+ height:40px;
+}
+.description {
+  margin: 0 10px;
+  font-weight:bold;
+}
+#header {
+  font-weight:bolder;
+}
+.jumbotron {
   background-image: url('../static/images/jumbotron.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -101,15 +100,21 @@ h2 {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}  
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
 
-  /* remove up and down button for number input */
+/* remove up and down button for number input */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
@@ -128,37 +133,35 @@ form {
   background-size: cover;
   width:100%;
 }
-  #edit {
-    background-color:rgba(0,255,0,0.3);
-    padding:10px;
-  }
-  #delete {
-    background-color:rgba(255,0,0,0.3);
-    padding:10px;
-  }
-  #back {
-    background-color:rgba(0,0,255,0.3);
-    padding:10px;
-  }
-    #largeproduct {
-    height:400px;
-  }
-  .desc {
-    padding:5px 10px;
-    text-align:justify;
-  }
+#edit {
+  background-color:rgba(0,255,0,0.3);
+  padding:10px;
+}
+#delete {
+  background-color:rgba(255,0,0,0.3);
+  padding:10px;
+}
+#back {
+  background-color:rgba(0,0,255,0.3);
+  padding:10px;
+}
+#largeproduct {
+  height:400px;
+  margin:0 auto;
+  display:block;
+}
+.desc {
+  padding:5px 10px;
+  text-align:justify;
+}
 @media only screen and (max-width: 768px) { 
   .navbar-brand img{
     display:none;
   }
- .dropdown-content {
-   font-size:10px;
-}
- .dropdown-content a {
-   padding:5px;
-}
-#largeproduct {
-  margin:0 auto;
-  display:block;
-}
+  .dropdown-content {
+    font-size:10px;
+  }
+  .dropdown-content a {
+    padding:5px;
+  }
 }

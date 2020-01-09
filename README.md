@@ -46,10 +46,12 @@ The site is mobile responsive on all forms of media (laptop, mobile and tablet).
 * Users can search for their products based on country of origin, type or purpose using the dropdown lists
 * Mobile responsive cards are used to display the product’s name, image and price. The selection will be updated when users filter with the above dropdown
 * The cards contain images of a consistent height so they look neat
+* If no image was added, shows default fallback image
 * On clicking on a product, users will be redirected to a product details page with more information about the product 
 * Users can reset their search with a prominent reset button at the top
 #### Product details page
 * Contains detailed information about the product (name, brand, country of origin, type, price, quantity, description and larger image). 
+* If no image was added, shows default fallback image
 * This page also allows users to edit the product info, delete it or go back to the main products listing page with color coded buttons
 * When users choose to edit the product, they will be redirected to the edit products page
 * When users choose to delete the product, a modal will pop up to confirm they really want to delete the product or not. If they click “yes”, they will be redirected to the main page. If they click “no” or outside of the modal, the modal will close and user remains on the product details page
