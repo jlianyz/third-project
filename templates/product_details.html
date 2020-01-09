@@ -9,7 +9,7 @@
 <div class="container" id="productdetails">
     <div class="row">
         <div class="col-sm-12 col-md-6">
-            <img src="{{url_for('file', filename=products['product_image_name'])}}" id="largeproduct">
+            <img src="{{url_for('file', filename=products['product_image_name'])}}" id="largeproduct" onerror="this.src='/static/images/defaultimage.png'">
         </div>
         <!--lines are more spaced out with css to make the page look more balanced relative to the image size-->
         <div class="col-sm-12 col-md-6" id="details">

@@ -45,7 +45,7 @@
       {% for product in products %}
       <div class="col-sm-6 col-md-4" id="box">
         <a href="product_details/{{product['_id']}}"><h3>
-        <img src="{{url_for('file', filename=product['product_image_name'])}}" id="productimg">
+        <img src="{{url_for('file', filename=product['product_image_name'])}}" id="productimg" onerror="this.src='/static/images/defaultimage.png'">
         <h3>{{product.name}}</h3>
         <p>SGD{{product.price}}</p></a>
       </div>
