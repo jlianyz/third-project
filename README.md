@@ -173,7 +173,7 @@ To deploy the page locally:
 2.	Click on the Clone/download button and copy the URL 
 3.	Set up a database with similar collections in MongoDB
 4.	Set up your own MONGI URI key
-4.	6.	To run the application locally, type `python3 app.py` in bash
+5.	To run the application locally, type `python3 app.py` in bash
 ***
 ### Credits
 **Images**

@@ -5,10 +5,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .navbar {
-  background-color:white;
+  background-color:black;
   font-family: 'Montserrat', sans-serif;
 }
 
+/*overwrite bootstrap css*/
+.navbar .navbar-nav .nav-link {
+    color: white;
+    font-weight:bolder;
+}
 .navbar-brand img {
   width:80px;
 }
